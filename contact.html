@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>Contact - TechWithTaneesh</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <header class="header"><div class="brand"><div class="logo">T</div><div><h1>Contact</h1><div class="tagline">Say hi or send a collaboration request</div></div></div></header>
+  <div class="navwrap"><nav class="nav"><a href="index.html">Home</a><a href="articles.html">Articles</a><a href="reviews.html">Reviews</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></div>
+  <main class="container" style="padding:24px;">
+    <div class="card">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input name="name" placeholder="Your name" required style="margin-bottom:10px;padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.02);color:var(--text);">
+        <input name="_replyto" type="email" placeholder="Your email" required style="margin-bottom:10px;padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.02);color:var(--text);">
+        <textarea name="message" rows="6" placeholder="Your message" required style="margin-bottom:10px;padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.02);color:var(--text);"></textarea>
+        <button type="submit" style="padding:10px 14px;border-radius:8px;border:none;background:linear-gradient(90deg,var(--accent),#8b5cf6);color:white;font-weight:700;">Send message</button>
+      </form>
+      <p style="color:var(--muted); margin-top:10px">Replace <code>YOUR_FORM_ID</code> with your Formspree ID to receive messages.</p>
+    </div>
+  </main>
+  <footer class="footer">© 2025 TechWithTaneesh</footer>
+</body>
+</html>
