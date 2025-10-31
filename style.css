@@ -1,0 +1,134 @@
+/* ---------- GLOBAL STYLES ---------- */
+:root {
+  --bg: #0d1117;
+  --card-bg: #161b22;
+  --text: #e6edf3;
+  --accent: #58a6ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  text-align: center;
+  padding: 50px 20px 20px;
+  animation: fadeInDown 1s ease-out;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+header p {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* ---------- NAV ---------- */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: var(--card-bg);
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* ---------- ARTICLE CARDS ---------- */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  gap: 25px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.article {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.article h2 {
+  color: var(--accent);
+}
+
+.article p {
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 15px;
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.read-more:hover {
+  background: #1f6feb;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--card-bg);
+  color: #aaa;
+  margin-top: 40px;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  header h1 { font-size: 2rem; }
+  .article { padding: 18px; }
+}
