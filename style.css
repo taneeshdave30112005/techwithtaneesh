@@ -1,0 +1,186 @@
+/* Modern Dark Mode Styles for TechWithTaneesh */
+:root{
+  --bg:#0b0f14;
+  --panel:#0f1720;
+  --muted:#9aa6b2;
+  --text:#e6eef6;
+  --accent:#60a5fa;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(96,165,250,0.06), transparent),
+              radial-gradient(900px 500px at 90% 90%, rgba(139,92,246,0.03), transparent),
+              var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+  padding-bottom:60px;
+}
+
+/* Header */
+.header {
+  text-align:center;
+  padding:48px 20px 28px;
+  backdrop-filter: blur(6px);
+}
+.brand {
+  display:inline-flex;
+  gap:12px;
+  align-items:center;
+}
+.logo {
+  width:56px;
+  height:56px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--accent), #8b5cf6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 6px 30px rgba(96,165,250,0.08), inset 0 -6px 20px rgba(0,0,0,0.15);
+  font-weight:700;
+}
+.brand h1{
+  font-size:1.6rem;
+  margin:0;
+  letter-spacing:0.4px;
+}
+.tagline{color:var(--muted); margin-top:8px; font-size:0.95rem}
+
+/* Nav */
+.nav {
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  border-top:1px solid rgba(255,255,255,0.03);
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  padding:12px 10px;
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+.nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:600;
+  padding:8px 12px;
+  border-radius:8px;
+  transition: all 220ms ease;
+}
+.nav a:hover{
+  color:var(--text);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(96,165,250,0.06);
+}
+
+/* Container and grid */
+.container{
+  max-width:1000px;
+  margin:28px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns: 1fr 320px;
+  gap:24px;
+}
+@media(max-width:920px){
+  .container{grid-template-columns:1fr}
+}
+
+/* Main posts */
+.main{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:20px;
+  border-radius:12px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+  border:1px solid rgba(255,255,255,0.03);
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+.card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(2,6,23,0.75);
+}
+.card h2{color:var(--accent); margin:0 0 8px 0; font-size:1.25rem}
+.card p{color:var(--muted); margin:0 0 10px 0}
+.read-more{
+  display:inline-block;
+  margin-top:8px;
+  background: linear-gradient(90deg,var(--accent), #7c3aed);
+  color:white;
+  padding:8px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  transition: opacity 180ms;
+}
+.read-more:hover{opacity:0.9}
+
+/* Sidebar */
+.sidebar{
+  position:relative;
+}
+.widget{
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.0));
+  padding:18px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.03);
+  margin-bottom:16px;
+}
+.widget h3{margin:0 0 10px 0; color:var(--text)}
+.subscribe input{
+  width:100%;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.04);
+  background:var(--glass);
+  color:var(--text);
+  margin-bottom:8px;
+}
+
+/* Footer */
+.footer{
+  max-width:1000px;
+  margin:40px auto;
+  padding:20px;
+  text-align:center;
+  color:var(--muted);
+}
+
+/* Article page tweaks */
+.article-hero{
+  max-width:900px;
+  margin:20px auto;
+  padding:20px;
+  border-radius:12px;
+}
+.article-hero h1{font-size:2rem; margin-bottom:6px}
+.article-hero .meta{color:var(--muted); margin-bottom:12px}
+
+/* forms */
+form input, form textarea{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  background: rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.03);
+  color:var(--text);
+  margin-bottom:10px;
+}
+form button{
+  background:linear-gradient(90deg,var(--accent), #8b5cf6);
+  border:none;
+  padding:10px 14px;
+  border-radius:10px;
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+}
