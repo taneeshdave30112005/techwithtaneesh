@@ -151,3 +151,44 @@ body{
   margin: 0 auto;           /* centers the content perfectly */
   padding: 0 10px 40px;     /* add small right padding */
 }
+/* --- NAVBAR FINAL FIX FOR MOBILE --- */
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;            /* now items will wrap instead of crop */
+  gap: 8px;
+  padding: 10px 4px;
+  background-color: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav a {
+  flex: 0 0 auto;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 10px;          /* smaller padding for mobile */
+  font-size: 0.9rem;          /* smaller text */
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--accent);
+  background-color: rgba(255,255,255,0.05);
+}
+
+/* Responsive tweak for extra small screens */
+@media (max-width: 480px) {
+  .nav {
+    gap: 6px;
+    padding: 8px 2px;
+  }
+  .nav a {
+    font-size: 0.85rem;
+    padding: 5px 8px;
+  }
+}
